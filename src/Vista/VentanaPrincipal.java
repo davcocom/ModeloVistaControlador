@@ -33,7 +33,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         initComponents();
     }
 
-    public void init(ArrayList<Candidato> candidatos) {
+    public void rellenarCBoxCandidatos(ArrayList<Candidato> candidatos) {
         DefaultComboBoxModel modeloCombo = new DefaultComboBoxModel();
         for (Candidato cand : candidatos) {
             modeloCombo.addElement(cand.getNombre());

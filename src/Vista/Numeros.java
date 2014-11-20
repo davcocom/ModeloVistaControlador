@@ -29,7 +29,6 @@ public class Numeros extends Vista {
     public void actualizar(Object o) {
         super.actualizar(o);
         this.candidatos = (ArrayList<Candidato>) o;
-       
         activar();
     }
 

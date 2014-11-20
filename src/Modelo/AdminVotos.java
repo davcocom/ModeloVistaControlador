@@ -23,8 +23,8 @@ public class AdminVotos extends Modelo {
     
     public AdminVotos() {
         this.cands = new ArrayList();
-        initCand();
-        initEventos();
+        inicializarCandidatos();
+        inicializarEventos();
         super.datos = cands;
     }
 
@@ -35,7 +35,7 @@ public class AdminVotos extends Modelo {
         return adminVtos;
     }
 
-    public void initCand() {
+    public void inicializarCandidatos() {
         Candidato A = new Candidato("A");
         cands.add(A);
         Candidato B = new Candidato("B");
@@ -44,8 +44,9 @@ public class AdminVotos extends Modelo {
         cands.add(C);
     }
 
-    private void initEventos() {
-        for (int i = 0; i < 3; i++) {
+    private void inicializarEventos() {
+        int numeroDeEventos=3;
+        for (int i = 0; i < numeroDeEventos; i++) {
             eventos.add(new Evento(i));
         }
     }
@@ -75,6 +76,7 @@ public class AdminVotos extends Modelo {
         for (Candidato candidato : ((ArrayList<Candidato>)getDatos())) {
             if (candidato.getNombre().equals(nombre)) {
                 ((ArrayList<Candidato>) getDatos()).remove(candidato);
+                break;
             }
         }
         notificarObservadoresEvento(0);

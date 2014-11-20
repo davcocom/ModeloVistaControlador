@@ -20,8 +20,7 @@ public class ControladorVotos extends Controlador{
     private String nombre=this.getClass().getName();
     VentanaPrincipal ventanaPrincipal = new VentanaPrincipal(this);
 
-    public ControladorVotos(AdminVotos modelo, int idEvento) {
-        
+    public ControladorVotos(AdminVotos modelo, int idEvento) {      
         super(modelo, idEvento);
     }
 
@@ -30,14 +29,14 @@ public class ControladorVotos extends Controlador{
         ((AdminVotos)super.getModelo()).agregarVoto(candidato);
     }
     
-    public void ventana(){
-        ventanaPrincipal.init((ArrayList<Candidato>)modelo.getDatos());
+    public void desplegarVentana(){
+        ventanaPrincipal.rellenarCBoxCandidatos((ArrayList<Candidato>)modelo.getDatos());
         ventanaPrincipal.setVisible(true);
     }
     
         @Override
     public void actualizar(Object o) {
         super.actualizar(o);
-        ventana();
+        desplegarVentana();
     }
 }

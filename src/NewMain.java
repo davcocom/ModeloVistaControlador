@@ -22,13 +22,13 @@ public class NewMain {
         // TODO code application logic here
         //AdminVotos admin=new AdminVotos();
         AdminVotos admin= new AdminVotos();
-        //admin.initCand();
+        //admin.inicializarCandidatos();
         ControladorVotos entrada=new ControladorVotos(admin, 0);
         Barras b=new Barras(admin,0);
         Pastel p=new Pastel(admin,0);
         Numeros v=new Numeros(admin,0);
         
-        entrada.ventana();
+        entrada.desplegarVentana();
 
     }
     

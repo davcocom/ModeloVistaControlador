@@ -24,7 +24,7 @@ public class VentanaTabla extends javax.swing.JFrame {
         initComponents();
     }
 
-    private void Clear_Table() {
+    private void inicializarTabla() {
         DefaultTableModel modeloDeLaTabla = (DefaultTableModel) this.tablaVotos.getModel();
         for (int i = 0; i < tablaVotos.getRowCount(); i++) {
             modeloDeLaTabla.removeRow(0);
@@ -34,7 +34,7 @@ public class VentanaTabla extends javax.swing.JFrame {
 
     public void llenaTabla(ArrayList<Candidato> votos) {
         //Declaramos las columnas:
-        Clear_Table();
+        inicializarTabla();
         Object columnasDeDatos[] = new Object[2];
 
         //obtenemos el modelo default de la tabla:
