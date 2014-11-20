@@ -75,6 +75,7 @@ public class AdminVotos extends Modelo {
         for (Candidato candidato : ((ArrayList<Candidato>)getDatos())) {
             if (candidato.getNombre().equals(nombre)) {
                 ((ArrayList<Candidato>) getDatos()).remove(candidato);
+                break;
             }
         }
         notificarObservadoresEvento(0);
