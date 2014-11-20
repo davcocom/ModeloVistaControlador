@@ -4,10 +4,15 @@
  * and open the template in the editor.
  */
 
+package Modelo;
+
 /**
  *
- * @author a09001005
+ * @author vaio
  */
-public interface Observer {
-    public void actualizar(Object o);
+public enum idEventos {
+    TODOS,
+    VISTAS,
+    CONTROLADORES
+    
 }

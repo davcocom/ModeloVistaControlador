@@ -1,3 +1,9 @@
+package Controlador;
+
+
+import Modelo.Modelo;
+import Modelo.Observer;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,7 +16,7 @@
  */
 public abstract class Controlador implements Observer {
 
-    private Modelo modelo;
+    protected Modelo modelo;
 
     public Controlador(Modelo modelo, int idEvento) {
         this.modelo = modelo;
@@ -30,5 +36,4 @@ public abstract class Controlador implements Observer {
         this.modelo = modelo;
     }
 
-    public abstract void accion();
 }

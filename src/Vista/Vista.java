@@ -1,3 +1,9 @@
+package Vista;
+
+import Modelo.Modelo;
+import Modelo.Observer;
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -17,7 +23,6 @@ public abstract class Vista implements Observer {
         this.modelo.registrarObservador(this, idEvento);
     }
 
-    @Override
     public void actualizar(Object o) {
         System.out.println("si actualiza, vista");
     }
